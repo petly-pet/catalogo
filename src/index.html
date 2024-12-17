@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header class="py-6">
+        <h1 class="text-4xl font-bold text-center">undefined</h1>
+
+        <!-- Selector de Secciones -->
+        <select id="sectionSelector" class="mt-4 p-2 mx-4 border rounded" onchange="showSection()">
+            <option value="offers">Ofertas</option>
+            <option value="new">Biofresh</option>
+            <option value="popular">Purina</option>
+        </select>
+    </header>
+
+    <section id="offers" class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 p-4">
+        <div class="border rounded shadow-sm">
+            <img src="https://via.placeholder.com/300x400" alt="Popular 1" class="w-full h-auto">
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">El más vendido Vol 3</h2>
+                <p class="text-green-500 font-bold">$10.990</p>
+                <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded">Ver más</button>
+            </div>
+        </div>
+        <div class="border rounded shadow-sm">
+            <img src="https://via.placeholder.com/300x400" alt="Popular 2" class="w-full h-auto">
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Top Manga Vol 5</h2>
+                <p class="text-green-500 font-bold">$10.000</p>
+                <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded">Ver más</button>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
