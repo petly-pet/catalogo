@@ -1,5 +1,5 @@
 function showSection() {
-    const sections = ["more", "purina", "biofresh"];
+    const sections = ["biofresh", "purina", "aaa"];
     const selected = document.getElementById("sectionSelector").value;
 
     sections.forEach(section => {
