@@ -13,14 +13,27 @@
     <header class="py-6">
         <h1 class="text-4xl font-bold text-center">Perros</h1>
 
-        <!-- Selector de Secciones -->
-        <select id="sectionSelector" class="mt-4 p-2 mx-4 border rounded" onchange="showSection(this.value)">
-            <option value="" selected class="hidden">choose an option</option>
-            <option value="pro-plan">Pro Plan</option>
-            <option value="fit-formula">Fit Fórmula</option>
-            <option value="nomade">Nómade</option>
-        </select>
+        <!-- Navbar Horizontal con Bordes -->
+        <nav class="bg-gray-800 p-4 rounded-lg shadow-lg">
+            <ul class="flex space-x-6 justify-center">
+                <li class="border-b-2 border-transparent hover:border-yellow-400">
+                    <a href="#" class="text-red-500 hover:text-yellow-400 py-2 px-4 transition duration-300"
+                        onclick="showSection('pro-plan')">Pro Plan</a>
+                </li>
+                <li class="border-b-2 border-transparent hover:border-yellow-400">
+                    <a href="#" class="text-gray hover:text-yellow-400 py-2 px-4 transition duration-300"
+                        onclick="showSection('fit-formula')">Fit Fórmula</a>
+                </li>
+                <li class="border-b-2 border-transparent hover:border-yellow-400">
+                    <a href="#" class="text-gray hover:text-yellow-400 py-2 px-4 transition duration-300"
+                        onclick="showSection('nomade')">Nómade</a>
+                </li>
+            </ul>
+        </nav>
+
+
     </header>
+
 
     <!-- Contenedor dinámico de secciones -->
     <main id="sectionContainer" class="container mx-auto p-4">
