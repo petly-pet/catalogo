@@ -8,15 +8,15 @@
     <script src="src/main.js"></script>
 </head>
 
-<body>
+<body class="select-none">
     <header class="py-6">
-        <h1 class="text-4xl font-bold text-center">undefined</h1>
+        <h1 class="text-4xl font-bold text-center">Perros</h1>
 
         <!-- Selector de Secciones -->
         <select id="sectionSelector" class="mt-4 p-2 mx-4 border rounded" onchange="showSection()">
-            <option value="offers">Pro Plan</option>
-            <option value="new">Purina</option>
-            <option value="popular">Purina</option>
+            <option value="Pro-Plan">Pro Plan</option>
+            <option value="Formula">Fit Fórmula</option>
+            <option value="Nomade">Nómade</option>
         </select>
     </header>
 
@@ -26,7 +26,8 @@
             <div class="relative w-full h-[300px]">
                 <!-- Contenedor con tamaño fijo -->
                 <img src="https://purina.cl/sites/default/files/styles/webp/public/2022-10/Puppy-Pollo-%26-Arroz-Small-Breed_1.png.webp?itok=b2oaq_mA"
-                    alt="Product1" class="w-full h-full object-cover rounded">
+                    alt="Product1"
+                    class="w-full h-full object-cover rounded hover:scale-95 transition duration-200 cursor-pointer">
                 <!-- Etiqueta de oferta -->
                 <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
             </div>
@@ -54,16 +55,17 @@
             <div class="relative w-full h-[300px]">
                 <!-- Contenedor con tamaño fijo -->
                 <img src="https://purina.cl/sites/default/files/styles/simple_card/public/2022-08/puppy_razas_medianas_frente_pro_plan.png.webp?itok=EIpNU1w9"
-                    alt="Product2" class="w-full h-full object-cover rounded">
+                    alt="Product2"
+                    class="w-full h-full object-cover rounded hover:scale-95 transition duration-200 cursor-pointer">
                 <!-- Etiqueta de oferta -->
                 <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
             </div>
             <!-- Información -->
             <div class="p-4 text-center">
                 <h2 class="font-semibold">Puppy Razas Medianas</h2>
-                <p class="line-through text-gray-500" id="original-price-product2">$47.800</p>
-                <p class="text-s-500 font-bold" id="price-product2">$45.800</p>
-                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+                <p class="line-through text-gray-500" id="original-price-product2">$24.000</p>
+                <p class="text-s-500 font-bold" id="price-product2">$22.500</p>
+                <button class="mt-3 bg-gray-500 text-white py-2 px-4 rounded">Agotado</button>
 
                 <!-- Tamaños disponibles -->
                 <div class="flex justify-center gap-2 mt-3">
@@ -80,7 +82,8 @@
             <div class="relative w-full h-[300px]">
                 <!-- Contenedor con tamaño fijo -->
                 <img src="https://purina.cl/sites/default/files/styles/simple_card/public/2022-08/ADULTO_razas_pequenas_front_proplan_0.png.webp?itok=M4p92pqT"
-                    alt="Product3" class="w-full h-full object-cover rounded">
+                    alt="Product3"
+                    class="w-full h-full object-cover rounded hover:scale-95 transition duration-200 cursor-pointer">
                 <!-- Etiqueta de oferta -->
                 <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
             </div>
@@ -107,7 +110,8 @@
             <div class="relative w-full h-[300px]">
                 <!-- Contenedor con tamaño fijo -->
                 <img src="https://purina.cl/sites/default/files/styles/webp/public/2022-10/razas-medianas-1-proplan.png.webp?itok=ICVy0yTw"
-                    alt="Product4" class="w-full h-full object-cover rounded">
+                    alt="Product4"
+                    class="w-full h-full object-cover rounded hover:scale-95 transition duration-200 cursor-pointer">
                 <!-- Etiqueta de oferta -->
                 <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
             </div>
@@ -131,7 +135,8 @@
             <div class="relative w-full h-[300px]">
                 <!-- Contenedor con tamaño fijo -->
                 <img src="https://purina.cl/sites/default/files/styles/simple_card/public/2022-08/adult_razas_grandes_pro_plan.png.webp?itok=r6pDCzjT"
-                    alt="Product5" class="w-full h-full object-cover rounded">
+                    alt="Product5"
+                    class="w-full h-full object-cover rounded hover:scale-95 transition duration-200 cursor-pointer">
                 <!-- Etiqueta de oferta -->
                 <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
             </div>
@@ -151,6 +156,342 @@
             </div>
         </div>
 
+    </section>
+    <section id="Formula" class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 p-4 hidden">
+        <!-- Product6 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://fitformula.cl/wp-content/uploads/2022/08/seco_perro_cachorro-min.png" alt="Product6"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Cachorro Todas las razas</h2>
+                <p class="line-through text-gray-500" id="original-price-product6">$24.000</p>
+                <p class="text-s-500 font-bold" id="price-product6">$22.500</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product6', 24.000, 22.500)">10Kg</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product7 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://fitformula.cl/wp-content/uploads/2022/08/seco_perro_adulto_pequena-min.png"
+                    alt="Product7"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Adulto Razas Pequeñas</h2>
+                <p class="line-through text-gray-500" id="original-price-product6">$20.200</p>
+                <p class="text-s-500 font-bold" id="price-product7">$22.500</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product7', 22.500, 20.200)">10Kg</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product8 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://fitformula.cl/wp-content/uploads/2022/08/seco_perro_adulto-min.png" alt="Product8"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Adulto Razas Grande</h2>
+                <p class="line-through text-gray-500" id="original-price-product8">$38.900</p>
+                <p class="text-s-500 font-bold" id="price-product8">$36.900</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product8', 38.900, 36.900)">20Kg</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product9 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://fitformula.cl/wp-content/uploads/2022/08/seco_perro_senior_pequena-min.png"
+                    alt="Product9"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Senior Razas Pequeñas</h2>
+                <p class="line-through text-gray-500" id="original-price-product9">$24.000</p>
+                <p class="text-s-500 font-bold" id="price-product9">$22.800</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product9', 24.000, 22.800)">10Kg</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product10 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://fitformula.cl/wp-content/uploads/2022/07/senior_10kg_g.png" alt="Product10"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Senior Razas Grande</h2>
+                <p class="line-through text-gray-500" id="original-price-product10">$43.500</p>
+                <p class="text-s-500 font-bold" id="price-product10">$41.300</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product10', 43.500, 41.300)">20Kg</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Formula" class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 p-4 hidden">
+        <!-- Product6 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://fitformula.cl/wp-content/uploads/2022/08/seco_perro_cachorro-min.png" alt="Product6"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Cachorro Razas Pequeñas</h2>
+                <p class="line-through text-gray-500" id="original-price-product6">$24.000</p>
+                <p class="text-s-500 font-bold" id="price-product6">$22.500</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product6', 24.000, 22.500)">10Kg</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product7 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://fitformula.cl/wp-content/uploads/2022/08/seco_perro_adulto_pequena-min.png"
+                    alt="Product7"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Adulto Razas Pequeñas</h2>
+                <br>
+                <p class="text-s-500 font-bold" id="price-product7">$22.500</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product7', 24.000, 22.500)">10Kg</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product8 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://fitformula.cl/wp-content/uploads/2022/08/seco_perro_adulto-min.png" alt="Product8"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Adulto Razas Grande</h2>
+                <p class="line-through text-gray-500" id="original-price-product8">$38.900</p>
+                <p class="text-s-500 font-bold" id="price-product8">$36.900</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product8', 38.900, 36.900)">20Kg</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product9 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://fitformula.cl/wp-content/uploads/2022/08/seco_perro_senior_pequena-min.png"
+                    alt="Product9"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Senior Razas Pequeñas</h2>
+                <p class="line-through text-gray-500" id="original-price-product9">$24.000</p>
+                <p class="text-s-500 font-bold" id="price-product9">$22.800</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product9', 24.000, 22.800)">10Kg</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product10 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://fitformula.cl/wp-content/uploads/2022/07/senior_10kg_g.png" alt="Product10"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Senior Razas Grande</h2>
+                <p class="line-through text-gray-500" id="original-price-product10">$43.500</p>
+                <p class="text-s-500 font-bold" id="price-product10">$41.300</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product10', 43.500, 41.300)">20Kg</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Nomade" class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 p-4 hidden">
+        <!-- Product11 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://www.nomadepet.cl/wp-content/uploads/2024/09/Nuevo-NOMADE_Cachorro-1-768x1152.png"
+                    alt="Product11"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Cachorro Todas las razas</h2>
+                <p class="line-through text-gray-500" id="original-price-product11">$21.900</p>
+                <p class="text-s-500 font-bold" id="price-product11">$20.900</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product11', 21.900, 20.900)">10Kg</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product12 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://www.nomadepet.cl/wp-content/uploads/2024/09/Nuevo-NOMADE_RazaPeq-1-683x1024.png"
+                    alt="Product12"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Adulto Razas Pequeñas</h2>
+                <p class="line-through text-gray-500" id="original-price-product12">$20.500</p>
+                <p class="text-s-500 font-bold" id="price-product12">$19.500</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product12', 20.500, 19.500)">10Kg</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product13 -->
+        <div class="border rounded shadow-sm">
+            <div class="relative w-full h-[300px]">
+                <!-- Contenedor con tamaño fijo -->
+                <img src="https://www.nomadepet.cl/wp-content/uploads/2024/09/Nuevo-NOMADE_Adulto-1-683x1024.png"
+                    alt="Product13"
+                    class="w-full h-full object-contain rounded hover:scale-95 transition duration-200 cursor-pointer">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+            </div>
+            <!-- Información -->
+            <div class="p-4 text-center">
+                <h2 class="font-semibold">Adulto Razas Pequeñas</h2>
+                <p class="line-through text-gray-500" id="original-price-product13">$34.500</p>
+                <p class="text-s-500 font-bold" id="price-product13">$33.000</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <button
+                        class="border border-yellow-600 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer 
+                            hover:bg-yellow-600 hover:text-white active:bg-yellow-600 active:scale-95 transition duration-200"
+                        onclick="updatePrice('product13', 34.500, 33.000)">20Kg</button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Botón de Chat -->
