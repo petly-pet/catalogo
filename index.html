@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="src/output.css" rel="stylesheet">
+    <link href="dist/output.css" rel="stylesheet">
     <script src="src/main.js"></script>
 </head>
 
@@ -14,63 +14,102 @@
 
         <!-- Selector de Secciones -->
         <select id="sectionSelector" class="mt-4 p-2 mx-4 border rounded" onchange="showSection()">
-            <option value="offers">Biofresh</option>
+            <option value="offers">Pro Plan</option>
             <option value="new">Purina</option>
             <option value="popular">Purina</option>
         </select>
     </header>
 
-    <section id="biofresh" class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 p-4">
+    <section id="Pro-Plan" class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 p-4">
         <!--Product1-->
         <div class="border rounded shadow-sm">
             <div class="relative w-full h-[300px]">
                 <!-- Contenedor con tamaño fijo -->
-                <img src="https://biofreshchile.cl/wp-content/uploads/2018/04/Biofresh-FILHOTES-Razas-Pequenas-e-Mini-01-600x600.png"
+                <img src="https://purina.cl/sites/default/files/styles/webp/public/2022-10/Puppy-Pollo-%26-Arroz-Small-Breed_1.png.webp?itok=b2oaq_mA"
                     alt="Popular 1" class="w-full h-full object-cover rounded">
                 <!-- Etiqueta de oferta -->
                 <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
             </div>
             <!-- information -->
             <div class="p-4 text-center">
-                <h2 class="font-semibold">CACHORROS <br>RAZAS PEQUEÑAS Y MINI</h2>
+                <h2 class="font-semibold">Puppy Razas Pequeñas</h2>
                 <p class="line-through text-gray-500">$25.990</p>
-                <p class="text-salmon-500 font-bold">$21.990</p>
-                <button class="mt-4 bg-red-500 text-white py-2 px-4 rounded">Información</button>
+                <p class="text-s-500 font-bold">$21.990</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <span
+                        class="border border-yellow-500 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer">3Kg</span>
+                    <span
+                        class="border border-yellow-500 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer">7.5Kg</span>
+                </div>
             </div>
         </div>
         <!--Product2-->
         <div class="border rounded shadow-sm">
             <div class="relative w-full h-[300px]">
                 <!-- Contenedor con tamaño fijo -->
-                <img src="https://biofreshchile.cl/wp-content/uploads/2019/07/Biofresh-MixADULTO-Pequenas-e-Mini-01-600x600.png"
+                <img src="https://purina.cl/sites/default/files/styles/webp/public/2022-10/ProPlan-Puppy-Razas-Medianas-01.png.webp?itok=EUCvxPjH"
                     alt="Popular 1" class="w-full h-full object-cover rounded">
                 <!-- Etiqueta de oferta -->
                 <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
             </div>
             <!-- information -->
             <div class="p-4 text-center">
-                <h2 class="font-semibold">ADULTOS <br>RAZAS PEQUEÑAS Y MINI</h2>
+                <h2 class="font-semibold">Puppy Razas mediana </h2>
                 <p class="line-through text-gray-500">$25.990</p>
-                <p class="text-salmon-500 font-bold">$23.990</p>
-                <button class="mt-4 bg-red-500 text-white py-2 px-4 rounded">Información</button>
+                <p class="text-s-500 font-bold">$21.990</p>
+                <button class="mt-3 bg-gray-500 text-white py-2 px-4 rounded">Agotado</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <span
+                        class="border border-yellow-500 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer">3Kg</span>
+                    <span
+                        class="border border-yellow-500 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer">15Kg</span>
+                </div>
             </div>
         </div>
         <!--Product3-->
         <div class="border rounded shadow-sm">
             <div class="relative w-full h-[300px]">
                 <!-- Contenedor con tamaño fijo -->
-                <img src="https://biofreshchile.cl/wp-content/uploads/2019/07/Biofresh-SENIOR-Pequenas-e-Mini-01-600x600.png"
+                <img src="https://purina.cl/sites/default/files/styles/webp/public/2022-08/puppy_razas_grandes_front_por_plan.png.webp?itok=4o2E9-2D"
                     alt="Popular 1" class="w-full h-full object-cover rounded">
+                <!-- Etiqueta de oferta -->
+                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
             </div>
             <!-- information -->
             <div class="p-4 text-center">
-                <h2 class="font-semibold">SENIOR <br>RAZAS PEQUEÑAS Y MINI</h2>
-                <br>
-                <p class="text-salmon-500 font-bold">$23.990</p>
-                <button class="mt-4 bg-red-500 text-white py-2 px-4 rounded">Información</button>
+                <h2 class="font-semibold">Puppy Razas grandes </h2>
+                <p class="line-through text-gray-500">$25.990</p>
+                <p class="text-s-500 font-bold">$21.990</p>
+                <button class="mt-3 bg-green-500 text-white py-2 px-4 rounded">Disponible</button>
+
+                <!-- Tamaños disponibles -->
+                <div class="flex justify-center gap-2 mt-3">
+                    <span
+                        class="border border-yellow-500 text-yellow-600 font-medium px-3 py-1 rounded cursor-pointer">15Kg</span>
+                </div>
             </div>
         </div>
+
+
     </section>
+
+    <!-- Botón de Chat -->
+    <div class="fixed bottom-4 left-4 z-50">
+        <a href="https://wa.me/123456789" target="_blank"
+            class="flex items-center bg-green-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
+            <!-- Imagen de WhatsApp -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                class="w-6 h-6 mr-2 object-contain">
+            <span>¿Alguna duda? Escríbenos</span>
+        </a>
+    </div>
+
+
 </body>
 
 </html>
