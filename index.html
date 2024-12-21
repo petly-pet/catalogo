@@ -1,54 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="dist/output.css" rel="stylesheet">
-    <script src="main.js" defer></script>
-    <title>Secciones Dinámicas</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <script src="/main.js"></script>
+    <title>Document</title>
 </head>
 
 <body class="select-none">
-    <header class="py-6">
-        <h1 class="text-4xl font-bold text-center">Perros</h1>
-        <!-- 
-        Selector de Secciones
-        <select id="sectionSelector" class="mt-4 p-2 mx-4 border rounded" onchange="showSection(this.value)">
-            <option value="" disabled selected class="hidden">Seleccionar</option>
-            <option value="pro-plan">Pro Plan</option>
-            <option value="fit-formula">Fit Fórmula</option>
-            <option value="nomade">Nómade</option>
-        </select> -->
 
-        <nav>
-            <div class="max-w-screen-xl px-4 py-3 mx-7">
-                <div class="flex items-center">
-                    <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
-                        <li class="border-b-2 border-transparent hover:border-yellow-400">
-                            <a href="#" class="text-red-400 hover:text-yellow-400 py-2 px-4 transition duration-300"
-                                onclick="showSection('pro-plan')">Pro Plan</a>
-                        </li>
-                        <li class="border-b-2 border-transparent hover:border-yellow-400">
-                            <a href="#" class="text-gray-400 hover:text-yellow-400 py-2 px-4 transition duration-300"
-                                onclick="showSection('fit-formula')">Fit Formula</a>
-                        </li>
-                        <li class="border-b-2 border-transparent hover:border-yellow-400">
-                            <a href="#" class="text-gray-400 hover:text-yellow-400 py-2 px-4 transition duration-300"
-                                onclick="showSection('nomade')">Nómade</a>
-                        </li>
-                    </ul>
-                </div>
+
+    <!-- Hero -->
+    <hero class="bg-neutral-100 flex justify-center mx-auto">
+        <p class="text-neutral-500 py-2 font-thin ">¡BIENVENIDO A PUNTO MASCOTAS!
+        </p>
+    </hero>
+    <!-- Header -->
+    <header class="bg-white">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="https://via.placeholder.com/40" alt="Peekio Logo" class="w-10 h-10">
+                <h1 class="text-xl font-bold">Punto</h1>
             </div>
-        </nav>
-
+            <!-- Navigation -->
+            <nav class="space-x-6">
+                <a href="#" class="text-gray-600 hover:text-blue-600">Inicio</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Caninos</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Felinos</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Contácto</a>
+            </nav>
+        </div>
     </header>
 
+    <!-- Publi Section -->
+    <section class="relative bg-black">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center pt-7">
+            <!-- Text Content -->
+            <div class="text-center md:text-left px-6 text-white">
+                <h2 class="text-4xl font-bold">Lorem ipsum </h2>
+                <p class="mt-4 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                <button class="mt-6 bg-white text-blue-500 font-bold px-6 py-2 rounded shadow-md hover:bg-gray-200">
+                    Productos
+                </button>
+            </div>
+            <!-- Hero Image -->
+            <div class="md:flex justify-center">
+                <img src="https://i.pinimg.com/736x/69/d4/af/69d4af46ac552bbbb22f457f29367de6.jpg" alt="Happy Dog">
+            </div>
+        </div>
+    </section>
 
-    <!-- Contenedor dinámico de secciones -->
-    <main id="sectionContainer" class="container mx-auto p-4">
-        <p class="text-center">Selecciona una sección para cargar el contenido.</p>
-    </main>
     <!-- Botón de Chat -->
     <div class="fixed bottom-4 left-4 z-50">
         <a href="https://wa.me/56952025197" target="_blank"
@@ -59,6 +63,8 @@
             <span>¿Alguna pedido? Escríbenos</span>
         </a>
     </div>
+
+
 </body>
 
 </html>

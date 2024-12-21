@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         ...colors, // Esto extiende y carga todos los colores
       },
+      backgroundImage: {
+        'hero-pattern': "url('/img/hero-pattern.svg')",
+      }
     },
   },
   plugins: [],

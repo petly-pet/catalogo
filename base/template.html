@@ -1,116 +1,87 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivrea España</title>
+    <title>Pet Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white font-sans">
-    <!-- Encabezado -->
-    <header class="text-center py-6">
-        <h1 class="text-4xl font-bold">Ivrea España</h1>
-        <p class="text-gray-500 mt-2">Mostrando 1-16 de 841 resultados</p>
-
-        <!-- Selector de Secciones -->
-        <select id="sectionSelector" class="mt-4 p-2 border rounded" onchange="showSection()">
-            <option value="offers">Ofertas</option>
-            <option value="new">Novedades</option>
-            <option value="popular">Más populares</option>
-        </select>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="https://via.placeholder.com/40" alt="Peekio Logo" class="w-10 h-10">
+                <h1 class="text-xl font-bold">Peekio</h1>
+            </div>
+            <!-- Navigation -->
+            <nav class="space-x-6">
+                <a href="#" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Shop</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Featured</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Pages</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Blogs</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Contenido Dinámico -->
-    <section id="offers" class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 p-4">
-        <!-- Producto 1 -->
-        <div class="border rounded shadow-sm">
-            <div class="relative">
-                <img src="https://via.placeholder.com/300x400" alt="Hokkaido Gals" class="w-full h-auto">
-                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
+    <!-- Hero Section -->
+    <section class="relative bg-blue-500">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center py-16">
+            <!-- Text Content -->
+            <div class="text-center md:text-left px-6 text-white">
+                <h2 class="text-4xl font-bold">Save 50% Off</h2>
+                <p class="mt-4 text-lg">Happy Pet, Happy You</p>
+                <button class="mt-6 bg-white text-blue-500 font-bold px-6 py-2 rounded shadow-md hover:bg-gray-200">Shop
+                    Now</button>
             </div>
-            <div class="p-4 text-center">
-                <h2 class="font-semibold">Hokkaido Gals 06</h2>
-                <p class="line-through text-gray-500">$11.990</p>
-                <p class="text-red-500 font-bold">$11.510</p>
-                <button class="mt-4 bg-pink-500 text-white py-2 px-4 rounded">Resérvalo ahora</button>
-            </div>
-        </div>
-        <!-- Producto 2 -->
-        <div class="border rounded shadow-sm">
-            <div class="relative">
-                <img src="https://via.placeholder.com/300x400" alt="Rent A Girlfriend" class="w-full h-auto">
-                <span class="absolute top-2 right-2 bg-white text-sm font-bold px-2 py-1 shadow">OFERTA</span>
-            </div>
-            <div class="p-4 text-center">
-                <h2 class="font-semibold">Rent A Girlfriend 32</h2>
-                <p class="line-through text-gray-500">$11.990</p>
-                <p class="text-red-500 font-bold">$11.510</p>
-                <button class="mt-4 bg-pink-500 text-white py-2 px-4 rounded">Resérvalo ahora</button>
+            <!-- Hero Image -->
+            <div class="mt-8 md:mt-0 flex justify-center">
+                <img src="https://via.placeholder.com/400x400" alt="Happy Dog"
+                    class="rounded-full border-4 border-white">
             </div>
         </div>
     </section>
 
-    <section id="new" class="hidden container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 p-4">
-        <div class="border rounded shadow-sm">
-            <img src="https://via.placeholder.com/300x400" alt="Nueva Saga" class="w-full h-auto">
-            <div class="p-4 text-center">
-                <h2 class="font-semibold">Nueva Saga Vol 1</h2>
-                <p class="text-green-500 font-bold">$12.000</p>
-                <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded">Comprar ahora</button>
+    <!-- Product Section -->
+    <section class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Polaroid 1 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center pb-6">
+                <div class="relative w-full">
+                    <img src="https://via.placeholder.com/300x200" alt="Dog Supplies" class="w-full h-48 object-cover">
+                </div>
+                <div class="text-center mt-4">
+                    <h3 class="text-lg font-bold text-gray-800">Dog Supplies</h3>
+                    <p class="text-gray-500 text-sm mt-2">Flea & Tick, Heartworm, Wormer & more</p>
+                </div>
             </div>
-        </div>
-        <div class="border rounded shadow-sm">
-            <img src="https://via.placeholder.com/300x400" alt="Novedad" class="w-full h-auto">
-            <div class="p-4 text-center">
-                <h2 class="font-semibold">Edición Especial</h2>
-                <p class="text-green-500 font-bold">$13.500</p>
-                <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded">Comprar ahora</button>
+            <!-- Polaroid 2 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center pb-6">
+                <div class="relative w-full">
+                    <img src="https://via.placeholder.com/300x200" alt="Cat Supplies" class="w-full h-48 object-cover">
+                </div>
+                <div class="text-center mt-4">
+                    <h3 class="text-lg font-bold text-gray-800">Cat Supplies</h3>
+                    <p class="text-gray-500 text-sm mt-2">Flea & Tick, Heartworm, Wormer & more</p>
+                </div>
+            </div>
+            <!-- Polaroid 3 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center pb-6">
+                <div class="relative w-full">
+                    <img src="https://via.placeholder.com/300x200" alt="Other Utensils"
+                        class="w-full h-48 object-cover">
+                </div>
+                <div class="text-center mt-4">
+                    <h3 class="text-lg font-bold text-gray-800">Other Utensils</h3>
+                    <p class="text-gray-500 text-sm mt-2">Flea & Tick, Heartworm, Wormer & more</p>
+                </div>
             </div>
         </div>
     </section>
-
-    <section id="popular" class="hidden container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 p-4">
-        <div class="border rounded shadow-sm">
-            <img src="https://via.placeholder.com/300x400" alt="Popular 1" class="w-full h-auto">
-            <div class="p-4 text-center">
-                <h2 class="font-semibold">El más vendido Vol 3</h2>
-                <p class="text-yellow-500 font-bold">$10.990</p>
-                <button class="mt-4 bg-yellow-500 text-white py-2 px-4 rounded">Ver más</button>
-            </div>
-        </div>
-        <div class="border rounded shadow-sm">
-            <img src="https://via.placeholder.com/300x400" alt="Popular 2" class="w-full h-auto">
-            <div class="p-4 text-center">
-                <h2 class="font-semibold">Top Manga Vol 5</h2>
-                <p class="text-yellow-500 font-bold">$10.000</p>
-                <button class="mt-4 bg-yellow-500 text-white py-2 px-4 rounded">Ver más</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Botón de Chat -->
-    <div class="fixed bottom-4 left-4">
-        <a href="#" class="bg-green-500 text-white py-3 px-6 rounded-full shadow-lg flex items-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
-                class="w-6 h-6 mr-2">
-            ¿Alguna duda? Escríbenos
-        </a>
-    </div>
-
-    <script>
-        function showSection() {
-            const sections = ["offers", "new", "popular"];
-            const selected = document.getElementById("sectionSelector").value;
-
-            sections.forEach(section => {
-                document.getElementById(section).classList.add("hidden");
-            });
-
-            document.getElementById(selected).classList.remove("hidden");
-        }
-    </script>
 </body>
 
 </html>
