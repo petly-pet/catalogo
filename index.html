@@ -5,36 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/output.css">
-    <script src="/main.js"></script>
+    <script src="dist/main.js" defer></script>
+    <script src="scripts/dynamic-content.js" defer></script>
     <title>Document</title>
 </head>
 
 <body class="select-none">
-
-
-    <!-- Hero -->
+    <!-- pre-header -->
     <hero class="bg-neutral-100 flex justify-center mx-auto">
-        <p class="text-neutral-500 py-2 font-thin ">¡BIENVENIDO A PUNTO MASCOTAS!
-        </p>
+        <p class="text-neutral-500 py-2 font-thin ">¡BIENVENIDO A PUNTO MASCOTAS!</p>
     </hero>
-    <!-- Header -->
+
+    <!-- header -->
     <header class="bg-white">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo -->
+            <!-- logo -->
             <div class="flex items-center space-x-2">
                 <img src="https://via.placeholder.com/40" alt="Peekio Logo" class="w-10 h-10">
                 <h1 class="text-xl font-bold">Punto</h1>
             </div>
-            <!-- Navigation -->
+            <!-- navigation -->
             <nav class="space-x-6">
-                <a href="#" class="text-gray-600 hover:text-blue-600">Inicio</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Caninos</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Felinos</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600" data-content="inicio">Inicio</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600" data-content="contacto">Contacto</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600" data-content="home">Novedades</a>
             </nav>
         </div>
     </header>
 
-    <!-- Publi Section -->
+    <!-- advertising section -->
     <section class="relative bg-black shadow-md">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center pt-7">
             <!-- Text Content -->
@@ -45,25 +44,27 @@
                     Productos
                 </button>
             </div>
-            <!-- Hero Image -->
+            <!-- advertising image -->
             <div class="md:flex justify-center">
                 <img src="https://i.pinimg.com/736x/69/d4/af/69d4af46ac552bbbb22f457f29367de6.jpg" alt="Happy Dog">
             </div>
         </div>
     </section>
 
-    <!-- Botón de Chat -->
+    <!-- section dynamic -->
+    <div id="dynamic-content" class="py-6">
+    </div>
+
+    <!-- chat button -->
     <div class="fixed bottom-4 left-4 z-50">
         <a href="https://wa.me/56952025197" target="_blank"
             class="flex items-center bg-green-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
-            <!-- Imagen de WhatsApp -->
+            <!-- whatsApp imagen -->
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
                 class="w-6 h-6 mr-2 object-contain">
-            <span>¿Alguna pedido? Escríbenos</span>
+            <span>¿Algún pedido? ¡Escríbenos!</span>
         </a>
     </div>
-
-
 </body>
 
 </html>
