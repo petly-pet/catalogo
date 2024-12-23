@@ -13,11 +13,14 @@
     <title>Document</title>
 </head>
 
-<body class="select-none">
+<body class="flex flex-col min-h-screen">
     <!-- pre-header -->
-    <hero class="bg-neutral-100 flex justify-center mx-auto">
-        <p class="text-neutral-500 py-2 font-thin ">¡BIENVENIDO A PUNTO MASCOTAS!</p>
-    </hero>
+    <footer class="bg-neutral-100 text-gray-400 py-2">
+        <div class="container mx-auto flex justify-center items-center">
+            <!-- Texto -->
+            <p class="text-sm">¡BIENVENIDO A PUNTO MASCOTAS!</p>
+        </div>
+    </footer>
     <!-- header -->
     <header class="bg-white">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -28,7 +31,7 @@
             </div>
             <!-- navigation -->
             <nav class="space-x-6">
-                <a href="#" class="text-gray-600 hover:text-blue-600" data-content="inicio">Inicio</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 " data-content="inicio">Inicio</a>
                 <a href="#" class="text-gray-600 hover:text-blue-600" data-content="contacto">Contacto</a>
             </nav>
         </div>
@@ -38,7 +41,7 @@
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center pt-2">
             <!-- Text Content -->
             <div class="text-center md:text-left px-6 text-white">
-                <h2 class="text-4xl font-bold">Lorem ipsum </h2>
+                <h2 class="text-4xl font-bold pt-6">¡Catálogo en oferta! </h2>
                 <p class="mt-4 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing</p>
                 <button class="mt-6 bg-white text-blue-500 font-bold px-6 py-2 rounded shadow-md hover:bg-gray-200">
                     Productos
@@ -49,7 +52,7 @@
                 <img src="https://i.pinimg.com/736x/69/d4/af/69d4af46ac552bbbb22f457f29367de6.jpg" alt="Happy Dog">
                 <!-- Despacho Icon -->
                 <div
-                    class="absolute bottom-0 md:right-4 md:left-auto left-1/2 transform md:translate-x-0 -translate-x-1/2 bg-red-600 text-white rounded-t-lg px-4 py-2 flex items-center shadow-md cursor-pointer group transition-all duration-500 hover:bg-red-500 hover:py-3">
+                    class="absolute bottom-0 md:right-4 md:left-auto left-1/2 transform md:translate-x-0 -translate-x-1/2 bg-red-600 text-white rounded-t-lg px-4 py-2 flex items-center shadow-md cursor-pointer group transition-all duration-500 hover:py-3">
                     <span
                         class="material-symbols-outlined mr-4 transform transition-transform duration-300 group-hover:translate-x-2">
                         delivery_truck_speed
@@ -64,15 +67,26 @@
     <div id="dynamic-content" class="py-6">
     </div>
     <!-- chat button -->
-    <div class="fixed bottom-4 left-4 z-50">
+    <div class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 mb-16">
         <a href="https://wa.me/56952025197" target="_blank"
             class="flex items-center bg-green-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
-            <!-- whatsApp imagen -->
+            <!-- WhatsApp imagen -->
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
                 class="w-6 h-6 mr-2 object-contain">
             <span>¿Algún pedido? ¡Escríbenos!</span>
         </a>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-100 text-gray-400 py-6 mt-auto">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Texto a la izquierda -->
+            <p class="text-sm">&copy; Copyright 2025. Punto Mascotas Chile, todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+
 </body>
 
 </html>
