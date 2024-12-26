@@ -1299,6 +1299,14 @@ video {
   transition-duration: 500ms;
 }
 
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
 @media (min-width: 768px) {
   .md\:container {
     width: 100%;
@@ -1430,6 +1438,11 @@ video {
 
 .hover\:pl-2:hover {
   padding-left: 0.5rem;
+}
+
+.hover\:text-2xl:hover {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .hover\:text-blue-600:hover {
