@@ -12,6 +12,9 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern': "url('/img/hero-pattern.svg')",
+      },
+      fontFamily: {
+        josefin: ['"Josefin Sans"', 'sans-serif'], // Agrega la fuente personalizada
       }
     },
   },
