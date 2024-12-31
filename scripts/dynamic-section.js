@@ -16,7 +16,7 @@ function loadContent(contentToLoad) {
 
 // Cargar contenido predeterminado (inicio.html)
 document.addEventListener('DOMContentLoaded', () => {
-    loadContent('caninos');
+    loadContent('iii');
 });
 
 // Configurar los enlaces del menú de navegación
