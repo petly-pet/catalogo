@@ -1,37 +1,29 @@
 // Función para cargar contenido dinámico
 function loadContent(contentToLoad) {
     const url = `src/points/${contentToLoad}.html`; // Ruta al archivo HTML
-    const dynamicContentDiv = document.getElementById('dynamic-content');
 
-    // Fetch del archivo HTML
+    // Cargar el archivo HTML correspondiente
     fetch(url)
         .then(response => {
-            if (!response.ok) {
-                throw new Error(`Error ${response.status}: ${response.statusText}`);
-            }
+            if (!response.ok) throw new Error('Error al cargar el contenido');
             return response.text();
         })
         .then(html => {
-            dynamicContentDiv.innerHTML = html; // Inyectar contenido en el div
+            document.getElementById('dynamic-content').innerHTML = html;
         })
-        .catch(error => {
-            console.error('Error al cargar contenido:', error);
-            dynamicContentDiv.innerHTML = `
-                <p class="text-red-500 text-center">No se pudo cargar el contenido. Intente nuevamente.</p>
-            `;
-        });
+        .catch(error => console.error('Error:', error));
 }
 
-// Cargar contenido predeterminado al iniciar
+// Cargar contenido predeterminado (inicio.html)
 document.addEventListener('DOMContentLoaded', () => {
-    loadContent('caninos'); // Cargar 'caninos' por defecto
+    loadContent('caninos');
 });
 
 // Configurar los enlaces del menú de navegación
-document.querySelectorAll('.navbar-item').forEach(link => {
+document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function (event) {
-        event.preventDefault(); // Evitar navegación predeterminada
-        const contentToLoad = this.getAttribute('data-content'); // Obtener el valor de data-content
-        loadContent(contentToLoad); // Cargar el contenido correspondiente
+        event.preventDefault(); // Evitar la acción predeterminada del enlace
+        const contentToLoad = this.getAttribute('data-content'); // Obtener el atributo data-content
+        loadContent(contentToLoad);
     });
 });

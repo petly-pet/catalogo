@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../dist/output.css">
+    <script src="../../scripts/dynamic-content.js" defer></script>
 
     <title>Document</title>
 </head>
@@ -13,23 +14,25 @@
     <div class="container mx-auto px-8">
 
         <form class="max-w-sm flex">
-            <select id="countries"
+            <select id="dogs" onchange="loadContent()"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-s rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option selected hidden>Mostrar</option>
-                <option value="BF">Biofresh</option>
+                <option selected hidden>Nuestras marcas</option>
                 <option value="PP">Proplan</option>
                 <option value="RC">Royal Canin</option>
                 <option value="FT">Fit Formula</option>
-                <option value="BK">Bokato</option>
                 <option value="NM">Nómade</option>
-                <option value="BV">Bravery</option>
                 <option value="BC">Brit Care</option>
             </select>
         </form>
 
-
-
+        <!-- Mostrar content -->
+        <div id="content" class="mt-4">
+            <p class="text-gray-500 flex justify-center">Selecciona una opción para cargar el contenido.</p>
+        </div>
     </div>
 </body>
 
+
 </html>
+
+</head>
