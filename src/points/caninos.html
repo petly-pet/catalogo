@@ -13,12 +13,24 @@
 
 <body class="flex flex-col min-h-screen">
     <div class="container mx-auto px-8">
-        <div class="flex items-center space-x-2 hover:opacity-100 text-xs">
-            <!-- Ícono del perro -->
-            <i class="fa fa-dog w3-text-gray w3-large cursor-pointer opacity-60"></i> <span class="mx-2">></span>
-            <!-- Texto -->
-            <span class="text-lime-700">Productos</span>
-        </div>
+
+        <form class="max-w-sm flex">
+            <select id="countries"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-s rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected hidden>Mostrar</option>
+                <option value="BF">Biofresh</option>
+                <option value="PP">Proplan</option>
+                <option value="RC">Royal Canin</option>
+                <option value="FT">Fit Formula</option>
+                <option value="BK">Bokato</option>
+                <option value="NM">Nómade</option>
+                <option value="BV">Bravery</option>
+                <option value="BC">Brit Care</option>
+            </select>
+        </form>
+
+
+
     </div>
 </body>
 
