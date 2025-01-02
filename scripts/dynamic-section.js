@@ -1,29 +1,19 @@
-// Función para cargar contenido dinámico
-function loadContent(contentToLoad) {
-    const url = `src/points/${contentToLoad}.html`; // Ruta al archivo HTML
+document.getElementById('select-dogs').addEventListener('change', function () {
+    const selectedFile = this.value; // Obtén el valor de la opción seleccionada
+    const contentDiv = document.getElementById('content-dogs');
 
-    // Cargar el archivo HTML correspondiente
-    fetch(url)
-        .then(response => {
-            if (!response.ok) throw new Error('Error al cargar el contenido');
-            return response.text();
-        })
-        .then(html => {
-            document.getElementById('dynamic-content').innerHTML = html;
-        })
-        .catch(error => console.error('Error:', error));
-}
-
-// Cargar contenido predeterminado (inicio.html)
-document.addEventListener('DOMContentLoaded', () => {
-    loadContent('iii');
-});
-
-// Configurar los enlaces del menú de navegación
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function (event) {
-        event.preventDefault(); // Evitar la acción predeterminada del enlace
-        const contentToLoad = this.getAttribute('data-content'); // Obtener el atributo data-content
-        loadContent(contentToLoad);
-    });
+    // Verifica que haya una opción válida seleccionada
+    if (selectedFile) {
+        fetch(selectedFile)
+            .then(response => {
+                if (!response.ok) throw new Error('No se pudo cargar el archivo');
+                return response.text();
+            })
+            .then(html => {
+                contentDiv.innerHTML = html; // Inyecta el contenido HTML cargado
+            })
+            .catch(error => {
+                contentDiv.innerHTML = `<p class="text-red-500">Error al cargar el contenido: ${error.message}</p>`;
+            });
+    }
 });

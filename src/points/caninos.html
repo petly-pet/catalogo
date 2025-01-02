@@ -5,32 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../dist/output.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Caninos</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const selectElement = document.getElementById("select-dogs");
+            const sections = document.querySelectorAll("section");
 
-    <title>Document</title>
+            selectElement.addEventListener("change", (event) => {
+                const selectedValue = event.target.value;
+
+                // Ocultar todas las secciones
+                sections.forEach(section => {
+                    section.classList.add("hidden");
+                });
+
+                // Mostrar la sección seleccionada
+                const sectionToShow = document.getElementById(selectedValue);
+                if (sectionToShow) {
+                    sectionToShow.classList.remove("hidden");
+                }
+            });
+        });
+    </script>
 </head>
 
 <body class="flex flex-col min-h-screen">
     <div class="container mx-auto px-8">
-
         <form class="max-w-sm flex">
-            <select id="countries"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-s rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option selected hidden>Mostrar</option>
-                <option value="BF">Biofresh</option>
-                <option value="PP">Proplan</option>
-                <option value="RC">Royal Canin</option>
-                <option value="FT">Fit Formula</option>
-                <option value="BK">Bokato</option>
-                <option value="NM">Nómade</option>
-                <option value="BV">Bravery</option>
-                <option value="BC">Brit Care</option>
+            <select id="select-dogs"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-s rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <option selected hidden value="">Nuestras marcas</option>
+                <option value="fit-formula">Fit Formula</option>
+                <option value="nomade">Nómade</option>
+                <option value="proplan">Proplan</option>
             </select>
         </form>
 
+        <!-- Secciones dinámicas -->
+        <div id="content-dogs" class="mt-4">
+            <!-- Fit Formula -->
+            <section id="fit-formula" class="hidden">
+                <h2 class="text-xl font-bold text-center">Fit Formula</h2>
+                <p class="text-gray-600 text-center">Productos de alta calidad para tu perro.</p>
+            </section>
 
+            <!-- Nómade -->
+            <section id="nomade" class="hidden">
+                <h2 class="text-xl font-bold text-center">Nómade</h2>
+                <p class="text-gray-600 text-center">Descubre la alimentación perfecta para caninos aventureros.</p>
+            </section>
 
+            <!-- Proplan -->
+            <section id="proplan" class="hidden">
+                <h2 class="text-xl font-bold text-center">Proplan</h2>
+                <p class="text-gray-600 text-center">Nutrición avanzada para perros en todas las etapas de vida.</p>
+            </section>
+
+            <!-- Mensaje predeterminado -->
+            <p class="text-gray-500 flex justify-center">Selecciona una opción para cargar el contenido.</p>
+        </div>
     </div>
 </body>
 

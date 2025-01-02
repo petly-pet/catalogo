@@ -4,7 +4,7 @@
  */
 async function showSection(sectionName) {
     const sectionContainer = document.getElementById("sectionContainer");
-    const sectionFile = `sections/${sectionName.toLowerCase()}.html`;
+    const sectionFile = `src/content_dog/${sectionName.toLowerCase()}.html`;
 
     try {
         const response = await fetch(sectionFile);
