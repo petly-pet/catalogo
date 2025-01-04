@@ -36,24 +36,22 @@ links.forEach(link => {
 });
 
 // Función para buscar texto dentro del contenido dinámico
-// Función para buscar texto dentro del contenido dinámico
 const searchContent = () => {
     const query = searchBar.value.toLowerCase(); // Obtiene el texto del campo de búsqueda
     const rows = document.querySelectorAll('tbody tr'); // Selecciona todas las filas del cuerpo de la tabla
 
     rows.forEach(row => {
         const text = row.textContent.toLowerCase(); // Obtén todo el texto de la fila
-        row.style.display = text.includes(query) ? '' : 'none'; // Muestra u oculta la fila completa
+        // Si el campo de búsqueda está vacío, muestra todas las filas
+        row.style.display = query === '' || text.includes(query) ? '' : 'none';
     });
 };
 
-// Añadir evento para buscar al presionar Enter
-searchBar.addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') {
-        event.preventDefault(); // Prevenir que se envíe un formulario accidentalmente
-        searchContent(); // Llama a la función de búsqueda
-    }
+// Añadir evento para buscar mientras se escribe
+searchBar.addEventListener('input', function () {
+    searchContent(); // Llama a la función de búsqueda cada vez que el usuario escribe
 });
+
 
 
 // Cargar contenido inicial (Caninos)
