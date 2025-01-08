@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Pedidos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6">Gestión de Pedidos</h1>
+
+        <!-- Formulario de pedidos -->
+        <form id="orderForm" class="space-y-4">
+            <div>
+                <label for="orderName" class="block text-sm font-medium text-gray-700">Nombre del Pedido</label>
+                <input type="text" id="orderName"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    placeholder="Ej. Pedido de libros" required>
+            </div>
+            <div>
+                <label for="orderDetails" class="block text-sm font-medium text-gray-700">Detalles del Pedido</label>
+                <textarea id="orderDetails" rows="3"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    placeholder="Ej. 5 libros de matemáticas, entrega urgente" required></textarea>
+            </div>
+            <div>
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300">
+                    Agregar Pedido
+                </button>
+            </div>
+        </form>
+
+        <!-- Lista de pedidos -->
+        <div class="mt-8">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Pedidos</h2>
+            <div id="orderList" class="space-y-4">
+                <!-- Los pedidos aparecerán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const orderForm = document.getElementById('orderForm');
+        const orderList = document.getElementById('orderList');
+
+        // Cargar pedidos guardados al iniciar la página
+        const loadOrders = () => {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            orderList.innerHTML = '';
+            orders.forEach((order, index) => {
+                const orderElement = document.createElement('div');
+                orderElement.className = "p-4 bg-gray-50 border border-gray-200 rounded-lg shadow flex justify-between items-start";
+                orderElement.innerHTML = `
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800">${order.name}</h3>
+                        <p class="text-sm text-gray-600 mt-1">${order.details}</p>
+                    </div>
+                    <button 
+                        class="bg-red-600 text-white py-1 px-3 rounded-lg hover:bg-red-700 focus:outline-none focus:ring focus:ring-red-300" 
+                        onclick="deleteOrder(${index})">
+                        Eliminar
+                    </button>
+                `;
+                orderList.appendChild(orderElement);
+            });
+        };
+
+        // Guardar pedido
+        orderForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const orderName = document.getElementById('orderName').value;
+            const orderDetails = document.getElementById('orderDetails').value;
+
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            orders.push({ name: orderName, details: orderDetails });
+            localStorage.setItem('orders', JSON.stringify(orders));
+
+            orderForm.reset(); // Limpiar formulario
+            loadOrders(); // Recargar lista de pedidos
+        });
+
+        // Eliminar pedido
+        const deleteOrder = (index) => {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            orders.splice(index, 1);
+            localStorage.setItem('orders', JSON.stringify(orders));
+            loadOrders(); // Recargar lista de pedidos
+        };
+
+        // Inicializar la lista de pedidos
+        loadOrders();
+    </script>
+</body>
+
+</html>
